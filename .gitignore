@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+# Virtual Environment
+venv/
+
+# Environment Variables
+.env
+# Generated Files
+faiss_cache/
+chat_history/
+chat_history.json
+.vscode/
+Thumbs.db
