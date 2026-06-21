@@ -4,18 +4,22 @@
 
 *Bot Link: https://aipdfchatbot-aruk.streamlit.app*
 
-<img width="1857" height="907" alt="image" src="https://github.com/user-attachments/assets/d052de15-0347-4d4f-bd14-536440b4cad9" />
-
+<p align="center">
+  <img src="images/image.png" alt="RAG Based PDF Assistant" width="100%">
+</p>
 
 
 ---
 
 ## 📘 Overview
 
-The **Smart PDF Chatbot** allows users to upload PDF documents and chat naturally with them.
-It uses **Retrieval-Augmented Generation (RAG)** to provide **contextual, document-grounded answers** powered by modern LLMs (OpenAI, Gemini, or Groq).
+RAG-Based PDF Assistant is an AI-powered application that enables users to interact with PDF documents using natural language.
 
-You can ask questions directly from your uploaded files, get concise and relevant answers, and even rename or manage chat sessions — all within a modern Streamlit UI.
+The application leverages **Retrieval-Augmented Generation (RAG)** by combining **Google Gemini**, **LangChain**, **HuggingFace Embeddings**, and **FAISS** to retrieve relevant information from PDF documents and generate accurate, context-aware responses.
+
+Users can upload a PDF, ask questions related to its content, and receive answers grounded in the document rather than relying solely on the language model's general knowledge.
+
+---
 
 ---
 
@@ -76,11 +80,10 @@ You can ask questions directly from your uploaded files, get concise and relevan
 ├── app.py                        # Streamlit UI + main logic
 ├── rag_pipeline.py               # RAG retrieval and generation logic
 ├── vectorstore_manager.py        # Embedding & FAISS handling
-├── chat_OpenAI.py / chat_Gemini.py  # LLM client wrappers
+├── chat_Gemini.py                # LLM client wrappers
 ├── session_manager.py            # Chat session handling
 ├── history_manager.py            # Saves chat history
 ├── data/                         # Uploaded PDFs
-├── faq_questions.json (optional) # Keyword-based suggestion data
 └── requirements.txt              # Dependencies
 ```
 
@@ -91,8 +94,7 @@ You can ask questions directly from your uploaded files, get concise and relevan
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/aruk3002/RAG_PDF_CHATBOT.git
-cd smart-pdf-chatbot
+git clone https://github.com/AlokSarwade2002/RAG-Based-PDF-Assistant.git
 ```
 
 ### 2️⃣ Create Virtual Environment
@@ -149,8 +151,7 @@ Then open your browser at `http://localhost:8501/`
    * LLM generates an answer **grounded in PDF context**.
    * If the answer isn’t in the document, it politely informs the user.
 
-4. **Session Management:**
-   Conversations are saved per session.
+4. **Session:**
    You can rename chats manually in the sidebar.
 
 ---
@@ -159,11 +160,11 @@ Then open your browser at `http://localhost:8501/`
 
 **User:**
 
-> What is the definition of manufacturing?
+> what is this document for?
 
 **Bot:**
 
-> The definition of manufacturing is not mentioned directly in the document, but the file discusses manufacturing processes such as production efficiency and quality control. Generally, manufacturing refers to converting raw materials into finished goods using labor and machinery.
+> This document appears to be a resume or curriculum vitae (CV). It outlines an individual's skills and educational background, specifically detailing certifications and courses completed in areas such as Generative AI, Data Analytics & Business Intelligence, AWS Cloud, Python programming, Numerical Python (NumPy & Pandas), Data Visualization, and Relational Databases. It highlights specific achievements and knowledge gained from each program.
 
 ---
 
@@ -204,7 +205,7 @@ Contributions are welcome!
 
 ## 👨‍💻 Author
 
-**Chandan Aruk**
-📊 Data Analyst | 💡 AI & Data Science Enthusiast
+**Alok Sarwade**
+📊 Data scientist | 💡 AI & Data Science Engineer
 
-📧 Linkedin [https://linkedin.com/in/chandan-aruk]
+📧 Linkedin [https://www.linkedin.com/in/alok-sarwade-datascience/]
