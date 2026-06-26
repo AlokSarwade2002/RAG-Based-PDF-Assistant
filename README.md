@@ -2,8 +2,6 @@
 
 *A Generative AI-powered RAG chatbot for interactive document querying.*
 
-*Bot Link: https://aipdfchatbot-aruk.streamlit.app*
-
 <p align="center">
   <img src="images/image.png" alt="RAG Based PDF Assistant" width="100%">
 </p>
